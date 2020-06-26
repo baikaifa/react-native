@@ -1,5 +1,6 @@
 # react-native
 react native
+nodejs 版本 10.16.3
 yarn add react-navigation -S
 react-navigation-tabs -S
 react-navigation-stack -S
