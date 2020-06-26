@@ -25,55 +25,56 @@ import FavouritePage from '../page/FavouritePage'
 import MyPage from '../page/MyPage'
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-const Tab = createBottomTabNavigator();
-function MyTabs() {
-  return (
-    <Tab.Navigator>
-      <Tab.Screen name="PopularPage" component={PopularPage}
-        options={{
-          tabBarLabel: '最热',
-          tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="home" color={color} size={size} />
-          ),
-        }}
-      />
-      <Tab.Screen name="FavouritePage" component={FavouritePage}
-        options={{
-          tabBarLabel: '收藏',
-          tabBarIcon: ({ tintColor, focused }) => (
-            <MaterialIcons name="whatshot"
-              color={tintColor} size={26} />
-          ),
-        }}
-      />
-      <Tab.Screen name="TrendingPage" component={TrendingPage}
-        options={{
-          tabBarLabel: '趋势',
-          tabBarIcon: ({ tintColor, focused }) => (
-            <MaterialIcons name="whatshot"
-              color={tintColor} size={26} />
-          ),
-        }}
-      />
-      <Tab.Screen name="MyPage" component={MyPage}
-        options={{
-          tabBarLabel: '我的',
-          tabBarIcon: ({ tintColor, focused }) => (
-            <MaterialIcons name="whatshot"
-              color={tintColor} size={26} />
-          ),
-        }}
-      />
-    </Tab.Navigator>
-  );
-}
+import DynamicTabNavigator from '../navigator/DynamicTabNavigator'
+// const Tab = createBottomTabNavigator();
+// function MyTabs() {
+//   return (
+//     <Tab.Navigator>
+//       <Tab.Screen name="PopularPage" component={PopularPage}
+//         options={{
+//           tabBarLabel: '最热',
+//           tabBarIcon: ({ color, size }) => (
+//             <MaterialCommunityIcons name="home" color={color} size={size} />
+//           ),
+//         }}
+//       />
+//       <Tab.Screen name="FavouritePage" component={FavouritePage}
+//         options={{
+//           tabBarLabel: '收藏',
+//           tabBarIcon: ({ tintColor, focused }) => (
+//             <MaterialIcons name="whatshot"
+//               color={tintColor} size={26} />
+//           ),
+//         }}
+//       />
+//       <Tab.Screen name="TrendingPage" component={TrendingPage}
+//         options={{
+//           tabBarLabel: '趋势',
+//           tabBarIcon: ({ tintColor, focused }) => (
+//             <MaterialIcons name="whatshot"
+//               color={tintColor} size={26} />
+//           ),
+//         }}
+//       />
+//       <Tab.Screen name="MyPage" component={MyPage}
+//         options={{
+//           tabBarLabel: '我的',
+//           tabBarIcon: ({ tintColor, focused }) => (
+//             <MaterialIcons name="whatshot"
+//               color={tintColor} size={26} />
+//           ),
+//         }}
+//       />
+//     </Tab.Navigator>
+//   );
+// }
 
 export default class HomePage extends Component {
- 
+
   render() {
-   
+
     return (
-      <MyTabs />
+      <DynamicTabNavigator />
     )
   }
 }
