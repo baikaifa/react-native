@@ -1,0 +1,7 @@
+{
+    "root": "D:\\code\\react-native\\ts_react_native\\ios",
+    "node_env": "development",
+    "default_script": "app.js",
+    "apps": {},
+    "web": {}
+}
