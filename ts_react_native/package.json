@@ -12,16 +12,27 @@
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.10",
     "@react-navigation/bottom-tabs": "^5.6.1",
+    "@react-navigation/material-top-tabs": "^5.2.12",
     "@react-navigation/native": "^5.6.1",
     "@react-navigation/stack": "^5.6.2",
+    "@types/react-native-snap-carousel": "^3.8.1",
+    "@types/react-redux": "^7.1.9",
+    "axios": "^0.19.2",
     "babel-plugin-module-resolver": "^4.0.0",
+    "dva-core-ts": "^2.0.7",
+    "dva-loading-ts": "^3.0.23",
     "react": "16.11.0",
     "react-native": "0.62.2",
     "react-native-config": "^1.2.1",
     "react-native-gesture-handler": "^1.6.1",
     "react-native-reanimated": "^1.9.0",
     "react-native-safe-area-context": "^3.0.7",
-    "react-native-screens": "^2.9.0"
+    "react-native-screens": "^2.9.0",
+    "react-native-snap-carousel": "^3.9.1",
+    "react-native-svg": "^12.1.0",
+    "react-native-tab-view": "^2.14.4",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",

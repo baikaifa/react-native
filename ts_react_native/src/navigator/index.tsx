@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { NavigationContainer } from '@react-navigation/native'
-import { createStackNavigator, HeaderStyleInterpolators, CardAnimationContext, CardStyleInterpolators } from '@react-navigation/stack'
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator, HeaderStyleInterpolators, CardAnimationContext, CardStyleInterpolators, HeaderTitle } from '@react-navigation/stack'
 import BottomTabs from './BottomTabs'
 import Detail from '@/pages/Detail';
 import { StackNavigationProp } from '@react-navigation/stack/lib/typescript/src/types';
-import { Platform, StyleSheet } from 'react-native';
+import { Platform, StyleSheet, StatusBar } from 'react-native';
 
 
 export type RootStackParamList = {
@@ -32,6 +32,7 @@ export default class Navigator extends React.Component {
             cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
             gestureEnabled: true,
             gestureDirection: 'horizontal',
+            headerStatusBarHeight:StatusBar.currentHeight,
             headerStyle: {
               ...Platform.select({
                 android: {
@@ -43,7 +44,7 @@ export default class Navigator extends React.Component {
           }}
         >
           <Stack.Screen name="BottomTabs"
-
+            options={{ headerTitle: '首页' }}
             component={BottomTabs} />
           <Stack.Screen name="Detail"
             options={{ headerTitle: '详情页' }}
